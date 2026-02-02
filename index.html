@@ -1,93 +1,324 @@
+<!--
+NOTA INTERNA (NÃO PUBLICAR TEXTO VISÍVEL):
+
+REGRA:
+Sempre que o comportamento da app mudar,
+copiar este HTML e colar no repo público (TrueGPS-Privacy).
+
+FIM DA NOTA INTERNA
+
+Sempre que houver alterações relevantes na política:
+- mudar SDKs
+- mudar monetização
+- mudar recolha de dados
+
+COPIAR ESTE HTML
+e colar manualmente no repositório público:
+https://github.com/KTMLaranjinha/TrueGPS-Privacy
+
+Este ficheiro:
+- NÃO entra no APK
+- NÃO é usado em runtime
+- Serve apenas como fonte / documentação viva
+
+FIM DA NOTA INTERNA
+-->
+
 <!doctype html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Política de Privacidade — TrueGPS Speed</title>
-    <meta name="robots" content="index,follow" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Privacy Policy — TrueGPS Speed</title>
+    <meta name="robots" content="index,follow"/>
+
     <style>
-        :root { --fg:#111; --muted:#666; --bg:#fff; --card:#f6f6f6; --line:#e6e6e6; }
-        body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--fg); background:var(--bg); }
-        .wrap { max-width: 900px; margin: 0 auto; padding: 28px 16px 60px; }
-        header { margin-bottom: 18px; }
+        body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#fff; color:#111; }
+        .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 56px; }
         h1 { margin: 0 0 6px; font-size: 28px; }
-        .sub { color: var(--muted); font-size: 13px; margin: 0; }
-        .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 14px 0; }
+        .sub { color:#666; font-size: 13px; margin: 2px 0; }
+        .lang { margin: 12px 0 18px; display:flex; flex-wrap:wrap; gap:6px; }
+        .lang button { padding: 6px 10px; border-radius: 16px; border:1px solid #ccc; background:#fff; cursor:pointer; font-size:13px; }
+        .lang button.active { font-weight: 700; border-color:#000; }
+        .card { background:#f6f6f6; border-radius: 12px; padding: 16px; margin: 14px 0; }
         h2 { margin: 0 0 6px; font-size: 18px; }
-        p, li { line-height: 1.55; }
-        ul { margin-top: 8px; }
-        .muted { color: var(--muted); }
-        footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
-        code { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 2px 6px; }
+        p { line-height: 1.55; margin: 8px 0; }
+        .muted { color:#666; }
     </style>
 </head>
+
 <body>
 <div class="wrap">
-    <header>
-        <h1>🔒 Política de Privacidade</h1>
-        <p class="sub">Aplicação: <strong>TrueGPS Speed</strong></p>
-        <p class="sub">Última atualização: <strong>Janeiro 2026</strong></p>
-    </header>
+    <h1 id="title">🔒 Privacy Policy</h1>
+    <p class="sub" id="appLine">App: TrueGPS Speed</p>
+    <p class="sub" id="updatedLine">Last updated: January 2026</p>
 
-    <div class="card">
-        <h2>1. Recolha de Dados</h2>
-        <p>
-            A aplicação <strong>TrueGPS Speed</strong> não recolhe, não armazena nem partilha quaisquer dados pessoais identificáveis.
-            Nenhuma informação é transmitida para fora do dispositivo, sendo todo o processamento realizado localmente.
-        </p>
-    </div>
+    <div class="lang" id="langButtons" aria-label="Language selector"></div>
 
-    <div class="card">
-        <h2>2. Localização</h2>
-        <p>
-            A localização é utilizada exclusivamente em tempo real para calcular a velocidade e apresentar dados no HUD.
-            Os dados de localização não são armazenados nem transmitidos para servidores externos.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>3. Armazenamento</h2>
-        <p>
-            As configurações, HUDs e preferências são guardadas exclusivamente no dispositivo do utilizador
-            e não são partilhadas nem sincronizadas externamente.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>4. Terceiros e Publicidade</h2>
-        <p>
-            A aplicação não partilha dados com terceiros por iniciativa própria.
-            Existe a possibilidade de obter créditos através de <strong>vídeos publicitários recompensados</strong>,
-            fornecidos por serviços de terceiros (por exemplo, a plataforma de publicidade da Google),
-            <strong>apenas quando o utilizador escolhe ver anúncios</strong>.
-        </p>
-        <p class="muted">
-            A aplicação não realiza tracking próprio nem analytics personalizados. Qualquer recolha/tratamento de dados associado aos anúncios
-            é gerido pelo respetivo fornecedor do serviço de publicidade, de acordo com as suas políticas.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>5. Alterações</h2>
-        <p>
-            Esta política pode ser atualizada em futuras versões da aplicação. Recomenda-se a consulta periódica.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Contacto</h2>
-        <p>
-            Em caso de dúvidas, o utilizador pode contactar o desenvolvedor através do endereço de email disponibilizado
-            na página da aplicação na Google Play.
-        </p>
-    </div>
-
-    <footer>
-        <p>
-            Nota: Para cumprir requisitos de publicação, esta página deve estar acessível publicamente via <code>https</code>
-            e sem necessidade de login.
-        </p>
-    </footer>
+    <div id="content"></div>
 </div>
+
+<script>
+    // 11 idiomas reais (sem “atalhos”)
+    const T = {
+      EN: {
+        htmlLang: "en",
+        title: "🔒 Privacy Policy",
+        updated: "Last updated: January 2026",
+        s1t: "1. Data Collection",
+        s1p: "The TrueGPS Speed app does not collect, store, or share any identifiable personal data. No information is transmitted off the device; all processing is performed locally.",
+        s2t: "2. Location",
+        s2p: "Location is used exclusively in real time to calculate speed and display data on the HUD. Location data is neither stored nor transmitted to external servers.",
+        s3t: "3. Storage",
+        s3p: "Settings, HUDs, and preferences are stored exclusively on the user's device and are not shared or synchronized externally.",
+        s4t: "4. Third Parties & Advertising",
+        s4p1: "The app does not share data with third parties on its own initiative. It uses optional rewarded video advertising provided by third-party services (e.g., Google), only when the user chooses to watch ads to earn credits.",
+        s4p2: "The app does not perform its own tracking or custom analytics.",
+        s5t: "5. Changes",
+        s5p: "This policy may be updated in future versions of the app. Periodic review is recommended.",
+        ct: "Contact",
+        cp: "If you have any questions, you may contact the developer via the email address provided on the app’s Google Play page."
+      },
+
+      PT: {
+        htmlLang: "pt-PT",
+        title: "🔒 Política de Privacidade",
+        updated: "Última atualização: Janeiro 2026",
+        s1t: "1. Recolha de Dados",
+        s1p: "A aplicação TrueGPS Speed não recolhe, não armazena nem partilha quaisquer dados pessoais identificáveis. Nenhuma informação é transmitida para fora do dispositivo, sendo todo o processamento realizado localmente.",
+        s2t: "2. Localização",
+        s2p: "A localização é utilizada exclusivamente em tempo real para calcular a velocidade e apresentar dados no HUD. Os dados de localização não são armazenados nem transmitidos para servidores externos.",
+        s3t: "3. Armazenamento",
+        s3p: "As configurações, HUDs e preferências são guardadas exclusivamente no dispositivo do utilizador e não são partilhadas nem sincronizadas externamente.",
+        s4t: "4. Terceiros e Publicidade",
+        s4p1: "A aplicação não partilha dados com terceiros por iniciativa própria. Utiliza publicidade opcional através de vídeos recompensados, fornecida por serviços de terceiros (ex.: Google), apenas quando o utilizador escolhe ver anúncios para obter créditos.",
+        s4p2: "A aplicação não realiza tracking próprio nem analytics personalizados.",
+        s5t: "5. Alterações",
+        s5p: "Esta política pode ser atualizada em futuras versões da aplicação. Recomenda-se a consulta periódica.",
+        ct: "Contacto",
+        cp: "Em caso de dúvidas, o utilizador pode contactar o desenvolvedor através do endereço de email disponibilizado na página da aplicação na Google Play."
+      },
+
+      BR: {
+        htmlLang: "pt-BR",
+        title: "🔒 Política de Privacidade",
+        updated: "Última atualização: Janeiro 2026",
+        s1t: "1. Coleta de Dados",
+        s1p: "O aplicativo TrueGPS Speed não coleta, não armazena nem compartilha quaisquer dados pessoais identificáveis. Nenhuma informação é transmitida para fora do dispositivo, sendo todo o processamento realizado localmente.",
+        s2t: "2. Localização",
+        s2p: "A localização é utilizada exclusivamente em tempo real para calcular a velocidade e exibir dados no HUD. Os dados de localização não são armazenados nem enviados para servidores externos.",
+        s3t: "3. Armazenamento",
+        s3p: "As configurações, HUDs e preferências são armazenadas exclusivamente no dispositivo do usuário e não são compartilhadas nem sincronizadas externamente.",
+        s4t: "4. Terceiros e Publicidade",
+        s4p1: "O aplicativo não compartilha dados com terceiros por iniciativa própria. Utiliza publicidade opcional por meio de vídeos recompensados, fornecida por serviços de terceiros (ex.: Google), apenas quando o usuário opta por assistir a anúncios para obter créditos.",
+        s4p2: "O aplicativo não realiza rastreamento próprio nem analytics personalizados.",
+        s5t: "5. Alterações",
+        s5p: "Esta política pode ser atualizada em versões futuras do aplicativo. Recomenda-se a consulta periódica.",
+        ct: "Contato",
+        cp: "Em caso de dúvidas, o usuário pode entrar em contato com o desenvolvedor por meio do endereço de e-mail disponibilizado na página do aplicativo na Google Play."
+      },
+
+      FR: {
+        htmlLang: "fr",
+        title: "🔒 Politique de confidentialité",
+        updated: "Dernière mise à jour : janvier 2026",
+        s1t: "1. Collecte des données",
+        s1p: "L’application TrueGPS Speed ne collecte, ne stocke ni ne partage aucune donnée personnelle identifiable. Aucune information n’est transmise hors de l’appareil, tout le traitement étant effectué localement.",
+        s2t: "2. Localisation",
+        s2p: "La localisation est utilisée exclusivement en temps réel pour calculer la vitesse et afficher les données sur le HUD. Les données de localisation ne sont ni stockées ni transmises à des serveurs externes.",
+        s3t: "3. Stockage",
+        s3p: "Les paramètres, HUDs et préférences sont stockés exclusivement sur l’appareil de l’utilisateur et ne sont ni partagés ni synchronisés en externe.",
+        s4t: "4. Tiers et publicité",
+        s4p1: "L’application ne partage pas de données avec des tiers de sa propre initiative. Elle utilise une publicité optionnelle via des vidéos récompensées, fournie par des services tiers (ex. : Google), uniquement lorsque l’utilisateur choisit de regarder des annonces pour obtenir des crédits.",
+        s4p2: "L’application n’effectue aucun suivi ni analyse personnalisée.",
+        s5t: "5. Modifications",
+        s5p: "Cette politique peut être mise à jour dans les futures versions de l’application. Une consultation périodique est recommandée.",
+        ct: "Contact",
+        cp: "En cas de questions, l’utilisateur peut contacter le développeur via l’adresse e-mail fournie sur la page de l’application sur Google Play."
+      },
+
+      ES: {
+        htmlLang: "es",
+        title: "🔒 Política de privacidad",
+        updated: "Última actualización: enero de 2026",
+        s1t: "1. Recopilación de datos",
+        s1p: "La aplicación TrueGPS Speed no recopila, almacena ni comparte ningún dato personal identificable. No se transmite ninguna información fuera del dispositivo; todo el procesamiento se realiza localmente.",
+        s2t: "2. Ubicación",
+        s2p: "La ubicación se utiliza exclusivamente en tiempo real para calcular la velocidad y mostrar datos en el HUD. Los datos de ubicación no se almacenan ni se transmiten a servidores externos.",
+        s3t: "3. Almacenamiento",
+        s3p: "Las configuraciones, HUDs y preferencias se almacenan exclusivamente en el dispositivo del usuario y no se comparten ni sincronizan externamente.",
+        s4t: "4. Terceros y publicidad",
+        s4p1: "La aplicación no comparte datos con terceros por iniciativa propia. Utiliza publicidad opcional mediante vídeos recompensados, proporcionada por servicios de terceros (p. ej., Google), únicamente cuando el usuario decide ver anuncios para obtener créditos.",
+        s4p2: "La aplicación no realiza seguimiento propio ni analítica personalizada.",
+        s5t: "5. Cambios",
+        s5p: "Esta política puede actualizarse en futuras versiones de la aplicación. Se recomienda revisarla periódicamente.",
+        ct: "Contacto",
+        cp: "En caso de dudas, el usuario puede contactar con el desarrollador a través de la dirección de correo electrónico indicada en la página de la aplicación en Google Play."
+      },
+
+      DE: {
+        htmlLang: "de",
+        title: "🔒 Datenschutzrichtlinie",
+        updated: "Letzte Aktualisierung: Januar 2026",
+        s1t: "1. Datenerhebung",
+        s1p: "Die App TrueGPS Speed sammelt, speichert oder teilt keine identifizierbaren personenbezogenen Daten. Es werden keine Informationen vom Gerät übertragen; die gesamte Verarbeitung erfolgt lokal.",
+        s2t: "2. Standort",
+        s2p: "Der Standort wird ausschließlich in Echtzeit zur Geschwindigkeitsberechnung und Anzeige im HUD verwendet. Standortdaten werden weder gespeichert noch an externe Server übertragen.",
+        s3t: "3. Speicherung",
+        s3p: "Einstellungen, HUDs und Präferenzen werden ausschließlich auf dem Gerät des Nutzers gespeichert und weder geteilt noch extern synchronisiert.",
+        s4t: "4. Dritte und Werbung",
+        s4p1: "Die App teilt keine Daten mit Dritten aus eigener Initiative. Sie verwendet optionale belohnte Videoanzeigen, die von Drittanbietern (z. B. Google) bereitgestellt werden, ausschließlich wenn der Nutzer sich entscheidet, Anzeigen anzusehen, um Credits zu erhalten.",
+        s4p2: "Die App führt kein eigenes Tracking und keine benutzerdefinierte Analyse durch.",
+        s5t: "5. Änderungen",
+        s5p: "Diese Richtlinie kann in zukünftigen Versionen der App aktualisiert werden. Eine regelmäßige Überprüfung wird empfohlen.",
+        ct: "Kontakt",
+        cp: "Bei Fragen kann der Nutzer den Entwickler über die auf der Google-Play-App-Seite angegebene E-Mail-Adresse kontaktieren."
+      },
+
+      IT: {
+        htmlLang: "it",
+        title: "🔒 Informativa sulla privacy",
+        updated: "Ultimo aggiornamento: gennaio 2026",
+        s1t: "1. Raccolta dei dati",
+        s1p: "L’app TrueGPS Speed non raccoglie, memorizza né condivide dati personali identificabili. Nessuna informazione viene trasmessa al di fuori del dispositivo; tutta l’elaborazione avviene localmente.",
+        s2t: "2. Posizione",
+        s2p: "La posizione viene utilizzata esclusivamente in tempo reale per calcolare la velocità e visualizzare i dati sull’HUD. I dati di posizione non vengono né memorizzati né trasmessi a server esterni.",
+        s3t: "3. Archiviazione",
+        s3p: "Le impostazioni, gli HUD e le preferenze sono salvate esclusivamente sul dispositivo dell’utente e non vengono condivise né sincronizzate esternamente.",
+        s4t: "4. Terze parti e pubblicità",
+        s4p1: "L’app non condivide dati con terze parti di propria iniziativa. Utilizza pubblicità opzionale tramite video premiati, fornita da servizi di terze parti (es. Google), solo quando l’utente sceglie di guardare annunci per ottenere crediti.",
+        s4p2: "L’app non esegue tracciamento né analisi personalizzate.",
+        s5t: "5. Modifiche",
+        s5p: "Questa informativa può essere aggiornata nelle versioni future dell’app. Si consiglia di consultarla periodicamente.",
+        ct: "Contatto",
+        cp: "In caso di domande, l’utente può contattare lo sviluppatore tramite l’indirizzo email indicato nella pagina dell’app su Google Play."
+      },
+
+      RU: {
+        htmlLang: "ru",
+        title: "🔒 Политика конфиденциальности",
+        updated: "Последнее обновление: январь 2026",
+        s1t: "1. Сбор данных",
+        s1p: "Приложение TrueGPS Speed не собирает, не хранит и не передаёт персональные идентифицируемые данные. Никакая информация не передаётся за пределы устройства; вся обработка выполняется локально.",
+        s2t: "2. Местоположение",
+        s2p: "Местоположение используется исключительно в реальном времени для расчёта скорости и отображения данных в HUD. Данные о местоположении не хранятся и не передаются на внешние серверы.",
+        s3t: "3. Хранение",
+        s3p: "Настройки, HUD и предпочтения хранятся исключительно на устройстве пользователя и не передаются и не синхронизируются извне.",
+        s4t: "4. Третьи лица и реклама",
+        s4p1: "Приложение не передаёт данные третьим лицам по собственной инициативе. Оно использует необязательную рекламу в виде вознаграждаемых видеороликов, предоставляемую сторонними сервисами (например, Google), только когда пользователь добровольно выбирает просмотр рекламы для получения кредитов.",
+        s4p2: "Приложение не осуществляет собственный трекинг или пользовательскую аналитику.",
+        s5t: "5. Изменения",
+        s5p: "Эта политика может обновляться в будущих версиях приложения. Рекомендуется периодически её просматривать.",
+        ct: "Контакты",
+        cp: "В случае вопросов пользователь может связаться с разработчиком по адресу электронной почты, указанному на странице приложения в Google Play."
+      },
+
+      HI: {
+        htmlLang: "hi",
+        title: "🔒 गोपनीयता नीति",
+        updated: "अंतिम अपडेट: जनवरी 2026",
+        s1t: "1. डेटा संग्रह",
+        s1p: "TrueGPS Speed ऐप किसी भी पहचान योग्य व्यक्तिगत डेटा को एकत्र, संग्रहीत या साझा नहीं करता। कोई भी जानकारी डिवाइस से बाहर नहीं भेजी जाती; सभी प्रोसेसिंग स्थानीय रूप से होती है।",
+        s2t: "2. स्थान",
+        s2p: "स्थान का उपयोग केवल वास्तविक समय में गति की गणना और HUD पर डेटा दिखाने के लिए किया जाता है। स्थान डेटा न तो संग्रहीत किया जाता है और न ही बाहरी सर्वरों को भेजा जाता है।",
+        s3t: "3. संग्रहण",
+        s3p: "सेटिंग्स, HUD और प्राथमिकताएँ केवल उपयोगकर्ता के डिवाइस पर संग्रहीत होती हैं और इन्हें बाहरी रूप से साझा या सिंक्रनाइज़ नहीं किया जाता।",
+        s4t: "4. तृतीय पक्ष और विज्ञापन",
+        s4p1: "यह ऐप अपनी पहल पर किसी तीसरे पक्ष के साथ डेटा साझा नहीं करता। यह केवल तब वैकल्पिक रिवॉर्डेड वीडियो विज्ञापन का उपयोग करता है, जो तृतीय-पक्ष सेवाओं (जैसे Google) द्वारा प्रदान किए जाते हैं, जब उपयोगकर्ता क्रेडिट प्राप्त करने के लिए स्वयं विज्ञापन देखने का विकल्प चुनता है।",
+        s4p2: "ऐप अपना कोई ट्रैकिंग या कस्टम एनालिटिक्स नहीं करता।",
+        s5t: "5. परिवर्तन",
+        s5p: "यह नीति ऐप के भविष्य के संस्करणों में अपडेट की जा सकती है। समय-समय पर इसकी समीक्षा करने की सलाह दी जाती है।",
+        ct: "संपर्क",
+        cp: "यदि आपके कोई प्रश्न हैं, तो आप Google Play पर ऐप के पेज पर दिए गए ईमेल पते के माध्यम से डेवलपर से संपर्क कर सकते हैं।"
+      },
+
+      ID: {
+        htmlLang: "id",
+        title: "🔒 Kebijakan Privasi",
+        updated: "Pembaruan terakhir: Januari 2026",
+        s1t: "1. Pengumpulan Data",
+        s1p: "Aplikasi TrueGPS Speed tidak mengumpulkan, menyimpan, atau membagikan data pribadi yang dapat diidentifikasi. Tidak ada informasi yang dikirim ke luar perangkat; semua pemrosesan dilakukan secara lokal.",
+        s2t: "2. Lokasi",
+        s2p: "Lokasi digunakan secara eksklusif secara real-time untuk menghitung kecepatan dan menampilkan data di HUD. Data lokasi tidak disimpan maupun dikirim ke server eksternal.",
+        s3t: "3. Penyimpanan",
+        s3p: "Pengaturan, HUD, dan preferensi disimpan secara eksklusif di perangkat pengguna dan tidak dibagikan maupun disinkronkan secara eksternal.",
+        s4t: "4. Pihak Ketiga & Iklan",
+        s4p1: "Aplikasi ini tidak membagikan data dengan pihak ketiga atas inisiatifnya sendiri. Aplikasi ini menggunakan iklan video berhadiah secara opsional yang disediakan oleh layanan pihak ketiga (misalnya Google), hanya ketika pengguna memilih untuk menonton iklan guna memperoleh kredit.",
+        s4p2: "Aplikasi ini tidak melakukan pelacakan atau analitik khusus sendiri.",
+        s5t: "5. Perubahan",
+        s5p: "Kebijakan ini dapat diperbarui pada versi aplikasi selanjutnya. Disarankan untuk meninjaunya secara berkala.",
+        ct: "Kontak",
+        cp: "Jika Anda memiliki pertanyaan, Anda dapat menghubungi pengembang melalui alamat email yang tercantum di halaman aplikasi di Google Play."
+      },
+
+      TR: {
+        htmlLang: "tr",
+        title: "🔒 Gizlilik Politikası",
+        updated: "Son güncelleme: Ocak 2026",
+        s1t: "1. Veri Toplama",
+        s1p: "TrueGPS Speed uygulaması tanımlanabilir hiçbir kişisel veriyi toplamaz, saklamaz veya paylaşmaz. Cihaz dışına hiçbir bilgi iletilmez; tüm işlemler yerel olarak gerçekleştirilir.",
+        s2t: "2. Konum",
+        s2p: "Konum yalnızca gerçek zamanlı olarak hız hesaplamak ve HUD üzerinde veri göstermek için kullanılır. Konum verileri ne saklanır ne de harici sunuculara iletilir.",
+        s3t: "3. Depolama",
+        s3p: "Ayarlar, HUD’lar ve tercihler yalnızca kullanıcının cihazında saklanır ve harici olarak paylaşılmaz veya senkronize edilmez.",
+        s4t: "4. Üçüncü Taraflar ve Reklam",
+        s4p1: "Uygulama, kendi inisiyatifiyle üçüncü taraflarla veri paylaşmaz. Yalnızca kullanıcı kredi kazanmak için reklam izlemeyi seçtiğinde, üçüncü taraf hizmetler (örn. Google) tarafından sağlanan isteğe bağlı ödüllü video reklamlarını kullanır.",
+        s4p2: "Uygulama kendi izleme veya özel analizlerini gerçekleştirmez.",
+        s5t: "5. Değişiklikler",
+        s5p: "Bu politika uygulamanın gelecekteki sürümlerinde güncellenebilir. Düzenli olarak kontrol edilmesi önerilir.",
+        ct: "İletişim",
+        cp: "Sorularınız olması durumunda, Google Play’deki uygulama sayfasında belirtilen e-posta adresi üzerinden geliştiriciyle iletişime geçebilirsiniz."
+      }
+    };
+
+    const titleEl = document.getElementById("title");
+    const updatedEl = document.getElementById("updatedLine");
+    const buttonsEl = document.getElementById("langButtons");
+    const contentEl = document.getElementById("content");
+
+    function card(h, p1, p2) {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `<h2>${h}</h2><p>${p1}</p>` + (p2 ? `<p class="muted">${p2}</p>` : "");
+      return div;
+    }
+
+    function render(lang) {
+      const d = T[lang] || T.EN;
+
+      document.documentElement.lang = d.htmlLang;
+      titleEl.textContent = d.title;
+      updatedEl.textContent = d.updated;
+
+      contentEl.innerHTML = "";
+      contentEl.appendChild(card(d.s1t, d.s1p));
+      contentEl.appendChild(card(d.s2t, d.s2p));
+      contentEl.appendChild(card(d.s3t, d.s3p));
+      contentEl.appendChild(card(d.s4t, d.s4p1, d.s4p2));
+      contentEl.appendChild(card(d.s5t, d.s5p));
+      contentEl.appendChild(card(d.ct, d.cp));
+
+      [...buttonsEl.querySelectorAll("button")].forEach(b => b.classList.remove("active"));
+      const btn = document.getElementById("btn_" + lang);
+      if (btn) btn.classList.add("active");
+
+      location.hash = lang.toLowerCase();
+    }
+
+    // Build buttons in same order as your translations
+    const order = ["PT","BR","EN","FR","ES","DE","IT","RU","HI","ID","TR"];
+    order.forEach(lang => {
+      const b = document.createElement("button");
+      b.id = "btn_" + lang;
+      b.textContent = lang;
+      b.onclick = () => render(lang);
+      buttonsEl.appendChild(b);
+    });
+
+    // Default EN (Play Console friendly), but allow #pt, #fr, etc.
+    const hash = (location.hash || "").replace("#","").toUpperCase();
+    render(T[hash] ? hash : "EN");
+</script>
+
 </body>
 </html>
