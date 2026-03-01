@@ -1,4 +1,4 @@
-<!--
+<!--<!--
 NOTA INTERNA (NÃO PUBLICAR TEXTO VISÍVEL):
 
 REGRA:
@@ -12,8 +12,7 @@ Sempre que houver alterações relevantes na política:
 - mudar monetização
 - mudar recolha de dados
 
-COPIAR ESTE HTML
-e colar manualmente no repositório público:
+COPIAR ESTE HTML e colar manualmente no repositório público:
 https://github.com/KTMLaranjinha/TrueGPS-Privacy
 
 Este ficheiro:
@@ -59,7 +58,7 @@ FIM DA NOTA INTERNA
 </div>
 
 <script>
-    // 11 idiomas reais (sem “atalhos”)
+    // 13 idiomas reais (sem “atalhos”)
     const T = {
       EN: {
         htmlLang: "en",
@@ -268,6 +267,44 @@ FIM DA NOTA INTERNA
         s5p: "Bu politika uygulamanın gelecekteki sürümlerinde güncellenebilir. Düzenli olarak kontrol edilmesi önerilir.",
         ct: "İletişim",
         cp: "Sorularınız olması durumunda, Google Play’deki uygulama sayfasında belirtilen e-posta adresi üzerinden geliştiriciyle iletişime geçebilirsiniz."
+      },
+
+      JA: {
+        htmlLang: "ja",
+        title: "🔒 プライバシーポリシー",
+        updated: "最終更新日：2026年1月",
+        s1t: "1. データの収集",
+        s1p: "TrueGPS Speed アプリは、個人を特定できるデータを収集、保存、共有しません。情報は端末外へ送信されることはなく、すべての処理はデバイス上でローカルに実行されます。",
+        s2t: "2. 位置情報",
+        s2p: "位置情報は、リアルタイムで速度を計算し、HUDに表示する目的のみに使用されます。位置情報は保存されず、外部サーバーへ送信されることもありません。",
+        s3t: "3. 保存",
+        s3p: "設定、HUD、ユーザー設定はすべてユーザーのデバイス上にのみ保存され、外部と共有または同期されることはありません。",
+        s4t: "4. 第三者および広告",
+        s4p1: "本アプリは、独自の判断で第三者とデータを共有することはありません。ユーザーが広告視聴を選択してクレジットを獲得する場合に限り、第三者サービス（例：Google）が提供する任意のリワード動画広告を利用します。",
+        s4p2: "本アプリは独自のトラッキングやカスタム分析を実施しません。",
+        s5t: "5. 変更",
+        s5p: "本ポリシーは、将来のアプリバージョンで更新される場合があります。定期的な確認を推奨します。",
+        ct: "お問い合わせ",
+        cp: "ご質問がある場合は、アプリの Google Play ページに記載されているメールアドレスを通じて開発者へお問い合わせください。"
+      },
+
+      KO: {
+        htmlLang: "ko",
+        title: "🔒 개인정보 처리방침",
+        updated: "최종 업데이트: 2026년 1월",
+        s1t: "1. 데이터 수집",
+        s1p: "TrueGPS Speed 앱은 개인을 식별할 수 있는 어떠한 데이터도 수집, 저장 또는 공유하지 않습니다. 모든 처리는 기기 내에서 로컬로 수행되며, 정보는 기기 외부로 전송되지 않습니다.",
+        s2t: "2. 위치 정보",
+        s2p: "위치 정보는 실시간으로 속도를 계산하고 HUD에 표시하기 위한 목적으로만 사용됩니다. 위치 데이터는 저장되거나 외부 서버로 전송되지 않습니다.",
+        s3t: "3. 저장",
+        s3p: "설정, HUD 및 사용자 환경설정은 전적으로 사용자의 기기에만 저장되며 외부와 공유되거나 동기화되지 않습니다.",
+        s4t: "4. 제3자 및 광고",
+        s4p1: "본 앱은 자체적으로 제3자와 데이터를 공유하지 않습니다. 사용자가 광고를 시청하여 크레딧을 획득하기로 선택한 경우에만, 제3자 서비스(예: Google)가 제공하는 선택적 보상형 동영상 광고를 사용합니다.",
+        s4p2: "본 앱은 자체적인 추적 또는 맞춤형 분석을 수행하지 않습니다.",
+        s5t: "5. 변경 사항",
+        s5p: "본 정책은 향후 앱 버전에서 업데이트될 수 있습니다. 정기적인 검토를 권장합니다.",
+        ct: "문의",
+        cp: "문의 사항이 있는 경우, 앱의 Google Play 페이지에 기재된 이메일 주소를 통해 개발자에게 연락하시기 바랍니다."
       }
     };
 
@@ -289,6 +326,7 @@ FIM DA NOTA INTERNA
       document.documentElement.lang = d.htmlLang;
       titleEl.textContent = d.title;
       updatedEl.textContent = d.updated;
+      document.title = `${d.title} — TrueGPS Speed`;
 
       contentEl.innerHTML = "";
       contentEl.appendChild(card(d.s1t, d.s1p));
@@ -302,11 +340,11 @@ FIM DA NOTA INTERNA
       const btn = document.getElementById("btn_" + lang);
       if (btn) btn.classList.add("active");
 
-      location.hash = lang.toLowerCase();
+      history.replaceState(null, "", "#" + lang.toLowerCase());
     }
 
     // Build buttons in same order as your translations
-    const order = ["PT","BR","EN","FR","ES","DE","IT","RU","HI","ID","TR"];
+    const order = ["EN","PT","BR","FR","ES","DE","IT","RU","HI","ID","TR","JA","KO"];
     order.forEach(lang => {
       const b = document.createElement("button");
       b.id = "btn_" + lang;
