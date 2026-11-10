@@ -1,70 +1,30 @@
-<!--
-
-Link público:
-val privacyPolicyUrl = "https://ktmlaranjinha.github.io/TrueGPS-Privacy/"    //TODO: Fazer um mini-site da App neste Link oficial da Política de Privacidade (HTML)
-
-NOTA INTERNA (NÃO PUBLICAR TEXTO VISÍVEL):
-
-REGRA:
-Sempre que o comportamento da app mudar,
-copiar este HTML e colar no repo público (TrueGPS-Privacy).
-
-FIM DA NOTA INTERNA
-
-Sempre que houver alterações relevantes na política:
-- mudar SDKs
-- mudar monetização
-- mudar recolha de dados
-
-COPIAR ESTE HTML e colar manualmente no repositório público:
-https://github.com/KTMLaranjinha/TrueGPS-Privacy
-
-Este ficheiro:
-- NÃO entra no APK
-- NÃO é usado em runtime
-- Serve apenas como fonte / documentação viva
-
-FIM DA NOTA INTERNA
--->
-
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Privacy Policy — TrueGPS Speed</title>
-    <meta name="robots" content="index,follow"/>
-
-    <style>
-        body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#fff; color:#111; }
-        .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 56px; }
-        h1 { margin: 0 0 6px; font-size: 28px; }
-        .sub { color:#666; font-size: 13px; margin: 2px 0; }
-        .lang { margin: 12px 0 18px; display:flex; flex-wrap:wrap; gap:6px; }
-        .lang button { padding: 6px 10px; border-radius: 16px; border:1px solid #ccc; background:#fff; cursor:pointer; font-size:13px; }
-        .lang button.active { font-weight: 700; border-color:#000; }
-        .card { background:#f6f6f6; border-radius: 12px; padding: 16px; margin: 14px 0; }
-        h2 { margin: 0 0 6px; font-size: 18px; }
-        p { line-height: 1.55; margin: 8px 0; }
-        .muted { color:#666; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){try{var q=new URLSearchParams(location.search),t=q.get("theme");if(t!=="light"&&t!=="dark")t=localStorage.getItem("theme");document.documentElement.dataset.theme=(t==="light"||t==="dark")?t:"dark";var l=q.get("lang")||"en";document.documentElement.lang=l==="br"?"pt-BR":l;}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+<title>Privacy Policy — TrueGPS Speed</title>
+<meta name="robots" content="index,follow">
+<style>
+:root{color-scheme:dark;--bg:#0F1115;--panel:#1A1D24;--tx:#fff;--tx2:#B7BCC5;--line:#2a2f3a;--link:#7ED0FF}
+[data-theme=light]{color-scheme:light;--bg:#F5F7FA;--panel:#fff;--tx:#0F1115;--tx2:#4A5260;--line:#dfe3ea;--link:#0E8FCC}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--link)}.terms-top{max-width:960px;margin:auto;padding:28px 20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{color:var(--tx);font-weight:700;text-decoration:none;letter-spacing:.02em}.brand span{color:#ff7a1a}
+#privacy-lang{max-width:min(100%,285px);padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--tx);font:inherit}
+.terms-main{max-width:960px;margin:auto;padding:42px 20px 72px}.terms-main h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 12px}
+.terms-main h2{font-size:1.35rem;margin:0 0 10px}.terms-main p{color:var(--tx2);line-height:1.75}.sub{font-size:.92rem;margin:4px 0}
+.policy-card{padding:18px 0;border-bottom:1px solid var(--line)}@media(max-width:520px){.terms-top{padding-top:18px;align-items:flex-start}.terms-main{padding-top:32px}}
+</style>
 </head>
-
 <body>
-<div class="wrap">
-    <h1 id="title">🔒 Privacy Policy</h1>
-    <p class="sub" id="appLine">App: TrueGPS Speed</p>
-    <p class="sub" id="officialSiteLine"></p>
-    <p class="sub" id="updatedLine">Last updated: October 2026</p>
-
-    <div class="lang" id="langButtons" aria-label="Language selector"></div>
-
-    <div id="content"></div>
-</div>
-
+<header class="terms-top"><a class="brand" href="https://ktmlaranjinha.github.io/TrueGPS/"><span>True</span>GPS Speed</a><select id="privacy-lang" aria-label="Language"></select></header>
+<main id="terms-main" class="terms-main">
+<h1 id="title">🔒 Privacy Policy</h1><p class="sub" id="appLine">App: TrueGPS Speed</p><p class="sub" id="officialSiteLine"></p><p class="sub" id="updatedLine">Last updated: October 2026</p><div id="content"></div>
+</main>
 <script>
-  // 13 idiomas reais (sem “atalhos”)
-  const T = {
+const T = {
     EN: {
       htmlLang: "en",
       title: "🔒 Privacy Policy",
@@ -312,20 +272,6 @@ FIM DA NOTA INTERNA
       cp: "질문이 있는 경우, Google Play 앱 페이지에 제공된 이메일 주소를 통해 개발자에게 문의할 수 있습니다."
     }
   };
-
-    const titleEl = document.getElementById("title");
-    const updatedEl = document.getElementById("updatedLine");
-    const officialSiteEl = document.getElementById("officialSiteLine");
-    const buttonsEl = document.getElementById("langButtons");
-    const contentEl = document.getElementById("content");
-
-    function card(h, p1, p2) {
-      const div = document.createElement("div");
-      div.className = "card";
-      div.innerHTML = `<h2>${h}</h2><p>${p1}</p>` + (p2 ? `<p class="muted">${p2}</p>` : "");
-      return div;
-    }
-
 const OFFICIAL_SITE_LABEL = {
   EN: "Visit Official Website",
   PT: "Ver Site Oficial",
@@ -341,46 +287,59 @@ const OFFICIAL_SITE_LABEL = {
   JA: "公式サイトを見る",
   KO: "공식 웹사이트 보기"
 };
-    
-    function render(lang) {
-      const d = T[lang] || T.EN;
-
-      document.documentElement.lang = d.htmlLang;
-      titleEl.textContent = d.title;
-      updatedEl.textContent = d.updated;
-      officialSiteEl.innerHTML =
-    `<a href="https://ktmlaranjinha.github.io/TrueGPS/">${OFFICIAL_SITE_LABEL[lang] || OFFICIAL_SITE_LABEL.EN}</a>`;
-      document.title = `${d.title} — TrueGPS Speed`;
-        
-      contentEl.innerHTML = "";
-      contentEl.appendChild(card(d.s1t, d.s1p));
-      contentEl.appendChild(card(d.s2t, d.s2p));
-      contentEl.appendChild(card(d.s3t, d.s3p));
-      contentEl.appendChild(card(d.s4t, d.s4p1, d.s4p2));
-      contentEl.appendChild(card(d.s5t, d.s5p));
-      contentEl.appendChild(card(d.ct, d.cp));
-
-      [...buttonsEl.querySelectorAll("button")].forEach(b => b.classList.remove("active"));
-      const btn = document.getElementById("btn_" + lang);
-      if (btn) btn.classList.add("active");
-
-      history.replaceState(null, "", "#" + lang.toLowerCase());
-    }
-
-    // Build buttons in same order as your translations
-    const order = ["EN","PT","BR","FR","ES","DE","IT","RU","HI","ID","TR","JA","KO"];
-    order.forEach(lang => {
-      const b = document.createElement("button");
-      b.id = "btn_" + lang;
-      b.textContent = lang;
-      b.onclick = () => render(lang);
-      buttonsEl.appendChild(b);
+(function () {
+  const selector = document.getElementById("privacy-lang");
+  const titleEl = document.getElementById("title");
+  const updatedEl = document.getElementById("updatedLine");
+  const officialSiteEl = document.getElementById("officialSiteLine");
+  const contentEl = document.getElementById("content");
+  const order = ["EN","PT","BR","FR","ES","DE","IT","RU","HI","ID","TR","JA","KO"];
+  const codes = {EN:"en",PT:"pt",BR:"br",FR:"fr",ES:"es",DE:"de",IT:"it",RU:"ru",HI:"hi",ID:"id",TR:"tr",JA:"ja",KO:"ko"};
+  function card(h, p1, p2) {
+    const section = document.createElement("section");
+    section.className = "policy-card";
+    const heading = document.createElement("h2"); heading.textContent = h; section.appendChild(heading);
+    [p1, p2].filter(Boolean).forEach(function (text) {
+      const p = document.createElement("p"); p.textContent = text; section.appendChild(p);
     });
-
-    // Default EN (Play Console friendly), but allow #pt, #fr, etc.
-    const hash = (location.hash || "").replace("#","").toUpperCase();
-    render(T[hash] ? hash : "EN");
+    return section;
+  }
+  function render(lang) {
+    const d = T[lang] || T.EN;
+    document.documentElement.lang = d.htmlLang;
+    titleEl.textContent = d.title;
+    updatedEl.textContent = d.updated;
+    officialSiteEl.textContent = "";
+    const official = document.createElement("a");
+    official.href = "https://ktmlaranjinha.github.io/TrueGPS/";
+    official.textContent = OFFICIAL_SITE_LABEL[lang] || OFFICIAL_SITE_LABEL.EN;
+    officialSiteEl.appendChild(official);
+    document.title = d.title + " — TrueGPS Speed";
+    contentEl.replaceChildren(card(d.s1t,d.s1p),card(d.s2t,d.s2p),card(d.s3t,d.s3p),card(d.s4t,d.s4p1,d.s4p2),card(d.s5t,d.s5p),card(d.ct,d.cp));
+    selector.value = codes[lang] || "en";
+  }
+  const reverse = {};
+  order.forEach(function (key) {
+    reverse[codes[key]] = key;
+    const option = document.createElement("option");
+    option.value = codes[key];
+    const names = {EN:"🇬🇧 English",PT:"🇵🇹 Português (Portugal)",BR:"🇧🇷 Português (Brasil)",FR:"🇫🇷 Français",ES:"🇪🇸 Español",DE:"🇩🇪 Deutsch",IT:"🇮🇹 Italiano",RU:"🇷🇺 Русский",HI:"🇮🇳 हिन्दी (Hindi)",ID:"🇮🇩 Bahasa Indonesia",TR:"🇹🇷 Türkçe",JA:"🇯🇵 日本語",KO:"🇰🇷 한국어"};
+    option.textContent = names[key]; selector.appendChild(option);
+  });
+  const query = new URLSearchParams(location.search);
+  let lang = (query.get("lang") || "").toLowerCase();
+  if (!reverse[lang]) { try { lang = (localStorage.getItem("lang") || "").toLowerCase(); } catch (e) {} }
+  if (!reverse[lang]) lang = "en";
+  render(reverse[lang]);
+  selector.addEventListener("change", function () {
+    const code = selector.value, key = reverse[code] || "EN";
+    render(key);
+    try { localStorage.setItem("lang", code); } catch (e) {}
+    query.set("lang", code);
+    query.set("theme", document.documentElement.dataset.theme || "dark");
+    history.replaceState(null, "", location.pathname + "?" + query.toString());
+  });
+})();
 </script>
-
 </body>
 </html>
