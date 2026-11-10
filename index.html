@@ -12,7 +12,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:var(--link)}.terms-top{max-width:960px;margin:auto;padding:28px 20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{color:var(--tx);font-weight:700;text-decoration:none;letter-spacing:.02em}.brand span{color:#ff7a1a}
-#privacy-lang{max-width:min(100%,285px);padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--tx);font:inherit}
+#privacy-lang{max-width:min(100%,285px);padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--tx);font:inherit;font-size:.9rem}
 .terms-main{max-width:960px;margin:auto;padding:42px 20px 72px}.terms-main h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 12px}
 .terms-main h2{font-size:1.35rem;margin:0 0 10px}.terms-main p{color:var(--tx2);line-height:1.75}.sub{font-size:.92rem;margin:4px 0}
 .policy-card{padding:18px 0;border-bottom:1px solid var(--line)}@media(max-width:520px){.terms-top{padding-top:18px;align-items:flex-start}.terms-main{padding-top:32px}}
@@ -23,6 +23,7 @@ a{color:var(--link)}.terms-top{max-width:960px;margin:auto;padding:28px 20px 0;d
 <header class="terms-top"><a class="brand" href="https://ktmlaranjinha.github.io/TrueGPS/"><img class="logo logo-dark" src="https://ktmlaranjinha.github.io/TrueGPS/assets/logo.png" alt="TrueGPS Speed" height="36"><img class="logo logo-light" src="https://ktmlaranjinha.github.io/TrueGPS/assets/logo0.png" alt="TrueGPS Speed" height="36"></a><select id="privacy-lang" aria-label="Language"></select></header>
 <main id="terms-main" class="terms-main">
 <h1 id="title">🔒 Privacy Policy</h1><p class="sub" id="appLine">App: TrueGPS Speed</p><p class="sub" id="officialSiteLine"></p><p class="sub" id="updatedLine">Last updated: October 2026</p><div id="content"></div>
+</main>
 <footer>
   <div class="links">
     <a href="https://ktmlaranjinha.github.io/TrueGPS/">TrueGPS Home</a>
@@ -39,7 +40,7 @@ a{color:var(--link)}.terms-top{max-width:960px;margin:auto;padding:28px 20px 0;d
   <p>© <span id="current-year">2026</span> TrueGPS Speed <span class="copyright-by">by <span>Laranjinha Software</span></span></p>
 </footer>
 <script>document.getElementById('current-year').textContent=new Date().getFullYear();</script>
-</main>
+
 <script>
 const T = {
     EN: {
