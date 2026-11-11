@@ -33,9 +33,9 @@ footer .links a[data-icon]{display:inline-flex;align-items:center;gap:.38em}foot
     <a data-icon="▶️" href="https://www.youtube.com/@TrueGPSSpeed">YouTube TrueGPS</a>
     <a data-icon="▶️" href="https://www.youtube.com/@KTMLaranjinha">YouTube KTMLaranjinha</a>
     <a data-icon="💻" href="https://github.com/KTMLaranjinha">GitHub</a>
-    <a data-icon="✉️" href="mailto:cjfmatos@gmail.com">Entrar em contacto</a>
-    <a data-icon="❤️" href="https://ktmlaranjinha.github.io/TrueGPS/#links">Patreon - Paypal - Revolut - Tesla</a>
-    <a data-icon="🛒" href="https://www.amazon.es/shop/ktmlaranjinha" rel="sponsored noopener">Amazon</a>
+    <a id="footer-contact" data-icon="✉️" href="mailto:cjfmatos@gmail.com">Contact</a>
+    <a id="footer-support" data-icon="❤️" href="https://ktmlaranjinha.github.io/TrueGPS/#links">Support</a>
+    <a id="footer-products" data-icon="🛒" href="https://www.amazon.es/shop/ktmlaranjinha" rel="sponsored noopener">Recommended Products</a>
     <a data-icon="🔒" href="https://ktmlaranjinha.github.io/TrueGPS-Privacy/?lang=en&amp;theme=dark" onclick='this.href="https://ktmlaranjinha.github.io/TrueGPS-Privacy/?lang="+encodeURIComponent(new URLSearchParams(location.search).get("lang")||"en")+"&amp;theme="+encodeURIComponent(document.documentElement.dataset.theme||"dark")'>Privacy Policy</a>
     <a data-icon="📜" href="https://ktmlaranjinha.github.io/TrueGPS/terms_of_service.html?lang=en&amp;theme=dark" onclick='this.href="https://ktmlaranjinha.github.io/TrueGPS/terms_of_service.html?lang="+encodeURIComponent(new URLSearchParams(location.search).get("lang")||"en")+"&amp;theme="+encodeURIComponent(document.documentElement.dataset.theme||"dark")'>Terms of Service</a>
   </div>
@@ -292,6 +292,12 @@ const T = {
       cp: "질문이 있는 경우, Google Play 앱 페이지에 제공된 이메일 주소를 통해 개발자에게 문의할 수 있습니다."
     }
   };
+const FOOTER_LABELS = {
+  EN: ["Support", "Recommended Products", "Contact"], PT: ["Apoio", "Produtos Recomendados", "Entrar em contacto"], BR: ["Apoio", "Produtos Recomendados", "Fale conosco"],
+  FR: ["Soutien", "Produits recommandés", "Nous contacter"], ES: ["Apoyo", "Productos recomendados", "Contacto"], DE: ["Unterstützung", "Empfohlene Produkte", "Kontakt"],
+  IT: ["Supporto", "Prodotti consigliati", "Contattaci"], RU: ["Поддержка", "Рекомендуемые товары", "Связаться"], TR: ["Destek", "Önerilen Ürünler", "İletişim"],
+  ID: ["Dukungan", "Produk Rekomendasi", "Hubungi kami"], HI: ["सहायता", "सुझाए गए उत्पाद", "संपर्क करें"], JA: ["応援", "おすすめ商品", "お問い合わせ"], KO: ["후원", "추천 제품", "문의하기"]
+};
 const OFFICIAL_SITE_LABEL = {
   EN: "Visit Official Website",
   PT: "Ver Site Oficial",
@@ -326,6 +332,10 @@ const OFFICIAL_SITE_LABEL = {
   }
   function render(lang) {
     const d = T[lang] || T.EN;
+    const footer = FOOTER_LABELS[lang] || FOOTER_LABELS.EN;
+    document.getElementById('footer-support').textContent = footer[0];
+    document.getElementById('footer-products').textContent = footer[1];
+    document.getElementById('footer-contact').textContent = footer[2];
     document.documentElement.lang = d.htmlLang;
     titleEl.textContent = d.title;
     updatedEl.textContent = d.updated;
